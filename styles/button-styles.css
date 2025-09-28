@@ -9,8 +9,8 @@
   --color-yellow-bright: #fff740; /* Bright yellow */
 }
 
-/* CSS */
-button.button-10 {
+/* CSS - Button-10 Style for both button and anchor elements */
+.button-10 {
   touch-action: manipulation;
   position: relative;
   display: inline-block;
@@ -21,9 +21,6 @@ button.button-10 {
   text-decoration: none;
   font-size: inherit;
   font-family: inherit;
-}
-button.button-10 {
-  touch-action: manipulation;
   font-weight: 600;
   color: #000;
   padding: 1.25em 2em;
@@ -33,7 +30,8 @@ button.button-10 {
   transform-style: preserve-3d;
   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
 }
-button.button-10::before {
+
+.button-10::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -48,19 +46,63 @@ button.button-10::before {
   transform: translate3d(0, 0.75em, -1em);
   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
 }
-button.button-10:hover {
+
+.button-10:hover {
   background: #ffe9e9;
   transform: translate(0, 0.25em);
+  color: #000;
+  text-decoration: none;
 }
-button.button-10:hover::before {
+
+.button-10:hover::before {
   box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
   transform: translate3d(0, 0.5em, -1em);
 }
-button.button-10:active {
+
+.button-10:active {
   background: #ffe9e9;
   transform: translate(0em, 0.75em);
+  color: #000;
+  text-decoration: none;
 }
-button.button-10:active::before {
+
+.button-10:active::before {
   box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
   transform: translate3d(0, 0, -1em);
+}
+
+.button-10:focus {
+  outline: 2px solid #b18597;
+  outline-offset: 2px;
+}
+
+/* CTA Button Styles */
+.cta-button {
+  background-color: #fff;
+  color: #000;
+  padding: 1rem 2rem;
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  color: #000;
+  text-decoration: none;
+}
+
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
 }
