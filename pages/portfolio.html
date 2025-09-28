@@ -3,10 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Fortbubble</title>
-    <meta name="description" content="Explore our portfolio of secure web development projects and successful cybersecurity implementations.">
+    <title>Portfolio - Fortbubble Web Development & Cybersecurity Projects</title>
+    <meta name="description" content="Explore our portfolio of secure web development projects and successful cybersecurity implementations. See our work in action.">
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://fortbubble.com.au/pages/portfolio.html">
+    <meta name="keywords" content="fortbubble portfolio, web development projects, cybersecurity projects, case studies, Australia">
+    <meta name="author" content="Fortbubble">
+    <meta name="geo.region" content="AU">
+    <meta name="geo.placename" content="Australia">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Portfolio - Fortbubble Web Development & Cybersecurity Projects">
+    <meta property="og:description" content="Explore our portfolio of secure web development projects and successful cybersecurity implementations. See our work in action.">
+    <meta property="og:image" content="https://fortbubble.com.au/assets/logos/Fortbubble_Logo.svg">
+    <meta property="og:url" content="https://fortbubble.com.au/pages/portfolio.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Fortbubble">
+    <meta property="og:locale" content="en_AU">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio - Fortbubble Web Development & Cybersecurity Projects">
+    <meta name="twitter:description" content="Explore our portfolio of secure web development projects and successful cybersecurity implementations. See our work in action.">
+    <meta name="twitter:image" content="https://fortbubble.com.au/assets/logos/Fortbubble_Logo.svg">
+    <meta name="twitter:site" content="@fortbubble">
+    <meta name="twitter:creator" content="@fortbubble">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../assets/logos/F_Logo_White.svg">
+    <link rel="apple-touch-icon" href="../assets/logos/F_Logo_White.svg">
     
     <!-- Web App Manifest -->
     <link rel="manifest" href="../manifest.json">
@@ -18,6 +46,12 @@
     <!-- Preconnect to External Domains for Performance -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="../assets/fonts/Aeonik-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/Aeonik-Medium.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +60,71 @@
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/background.css">
     <link rel="stylesheet" href="../styles/button-styles.css">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: document.title,
+            page_location: window.location.href
+        });
+    </script>
+    
+    <!-- Structured Data - Portfolio Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Fortbubble Portfolio",
+        "description": "Explore our portfolio of secure web development projects and successful cybersecurity implementations",
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "Fortbubble Project Portfolio",
+            "description": "A collection of our successful web development and cybersecurity projects",
+            "numberOfItems": "Multiple",
+            "itemListElement": [
+                {
+                    "@type": "CreativeWork",
+                    "name": "Web Development Projects",
+                    "description": "Modern, responsive websites and web applications built with security in mind",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Fortbubble"
+                    }
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Cybersecurity Implementations",
+                    "description": "Comprehensive security assessments, penetration testing, and security consulting projects",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Fortbubble"
+                    }
+                }
+            ]
+        },
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://fortbubble.com.au"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Portfolio",
+                    "item": "https://fortbubble.com.au/pages/portfolio.html"
+                }
+            ]
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Skip Navigation for Accessibility -->
