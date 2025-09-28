@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Fortbubble</title>
+    <meta name="description" content="Stay updated with the latest cybersecurity trends, web development best practices, and security insights from Fortbubble experts.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/logos/F_Logo_White.svg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/button-styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/logos/Fortbubble_Logo.svg" alt="Fortbubble" height="40">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="../assets/logos/Fortbubble_Grid.svg" alt="Menu" class="navbar-toggler-icon-custom">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header py-5">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 mb-4">Security & Development Blog</h1>
+                        <p class="lead">Expert insights on cybersecurity, web development, and digital security best practices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-categories">
+            <div class="container">
+                <div class="category-filters">
+                    <button class="category-btn active" data-category="all">All Posts</button>
+                    <button class="category-btn" data-category="cybersecurity">Cybersecurity</button>
+                    <button class="category-btn" data-category="web-development">Web Development</button>
+                    <button class="category-btn" data-category="security-tips">Security Tips</button>
+                    <button class="category-btn" data-category="industry-news">Industry News</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-post">
+            <div class="container">
+                <div class="featured-content">
+                    <div class="featured-image">
+                        <div class="post-placeholder">Featured Article</div>
+                    </div>
+                    <div class="featured-text">
+                        <span class="post-category">Cybersecurity</span>
+                        <h2>The Future of Zero Trust Security Architecture</h2>
+                        <p>As cyber threats become more sophisticated, organizations are adopting zero trust security models to protect their digital assets. Learn how this approach is revolutionizing enterprise security.</p>
+                        <div class="post-meta">
+                            <span class="author">By Sarah Johnson</span>
+                            <span class="date">December 15, 2024</span>
+                            <span class="read-time">8 min read</span>
+                        </div>
+                        <button class="button-10">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-posts">
+            <div class="container">
+                <div class="posts-grid">
+                    <article class="blog-post" data-category="web-development">
+                        <div class="post-image">
+                            <div class="post-placeholder">Web Development</div>
+                        </div>
+                        <div class="post-content">
+                            <span class="post-category">Web Development</span>
+                            <h3>Building Secure React Applications: Best Practices</h3>
+                            <p>Essential security practices for React developers to protect against common vulnerabilities and build robust applications.</p>
+                            <div class="post-meta">
+                                <span class="author">By Michael Chen</span>
+                                <span class="date">December 12, 2024</span>
+                                <span class="read-time">6 min read</span>
+                            </div>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-category="cybersecurity">
+                        <div class="post-image">
+                            <div class="post-placeholder">Cybersecurity</div>
+                        </div>
+                        <div class="post-content">
+                            <span class="post-category">Cybersecurity</span>
+                            <h3>Understanding Ransomware: Prevention and Response</h3>
+                            <p>A comprehensive guide to ransomware threats, prevention strategies, and incident response procedures for businesses.</p>
+                            <div class="post-meta">
+                                <span class="author">By Emily Rodriguez</span>
+                                <span class="date">December 10, 2024</span>
+                                <span class="read-time">10 min read</span>
+                            </div>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-category="security-tips">
+                        <div class="post-image">
+                            <div class="post-placeholder">Security Tips</div>
+                        </div>
+                        <div class="post-content">
+                            <span class="post-category">Security Tips</span>
+                            <h3>10 Essential Password Security Tips for 2024</h3>
+                            <p>Simple yet effective password security practices that can significantly improve your digital security posture.</p>
+                            <div class="post-meta">
+                                <span class="author">By David Kim</span>
+                                <span class="date">December 8, 2024</span>
+                                <span class="read-time">5 min read</span>
+                            </div>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-category="web-development">
+                        <div class="post-image">
+                            <div class="post-placeholder">Web Development</div>
+                        </div>
+                        <div class="post-content">
+                            <span class="post-category">Web Development</span>
+                            <h3>API Security: Protecting Your Backend Services</h3>
+                            <p>Learn how to secure your APIs against common attacks and implement proper authentication and authorization.</p>
+                            <div class="post-meta">
+                                <span class="author">By Lisa Wang</span>
+                                <span class="date">December 5, 2024</span>
+                                <span class="read-time">7 min read</span>
+                            </div>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-category="industry-news">
+                        <div class="post-image">
+                            <div class="post-placeholder">Industry News</div>
+                        </div>
+                        <div class="post-content">
+                            <span class="post-category">Industry News</span>
+                            <h3>New Cybersecurity Regulations: What Businesses Need to Know</h3>
+                            <p>An overview of recent cybersecurity regulations and compliance requirements affecting businesses in 2024.</p>
+                            <div class="post-meta">
+                                <span class="author">By James Wilson</span>
+                                <span class="date">December 3, 2024</span>
+                                <span class="read-time">9 min read</span>
+                            </div>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-category="cybersecurity">
+                        <div class="post-image">
+                            <div class="post-placeholder">Cybersecurity</div>
+                        </div>
+                        <div class="post-content">
+                            <span class="post-category">Cybersecurity</span>
+                            <h3>Social Engineering Attacks: How to Protect Your Organization</h3>
+                            <p>Understanding social engineering tactics and implementing effective training programs to protect your team.</p>
+                            <div class="post-meta">
+                                <span class="author">By Maria Garcia</span>
+                                <span class="date">December 1, 2024</span>
+                                <span class="read-time">8 min read</span>
+                            </div>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-category="web-development">
+                        <div class="post-image">
+                            <div class="post-placeholder">Web Development</div>
+                        </div>
+                        <div class="post-content">
+                            <span class="post-category">Web Development</span>
+                            <h3>Secure Coding Practices for JavaScript Developers</h3>
+                            <p>Essential secure coding practices that every JavaScript developer should implement to build safer applications.</p>
+                            <div class="post-meta">
+                                <span class="author">By Alex Thompson</span>
+                                <span class="date">November 28, 2024</span>
+                                <span class="read-time">6 min read</span>
+                            </div>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-category="security-tips">
+                        <div class="post-image">
+                            <div class="post-placeholder">Security Tips</div>
+                        </div>
+                        <div class="post-content">
+                            <span class="post-category">Security Tips</span>
+                            <h3>Multi-Factor Authentication: Implementation Guide</h3>
+                            <p>A step-by-step guide to implementing MFA across your organization to enhance security without compromising usability.</p>
+                            <div class="post-meta">
+                                <span class="author">By Rachel Brown</span>
+                                <span class="date">November 25, 2024</span>
+                                <span class="read-time">7 min read</span>
+                            </div>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-signup py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h2 class="display-5 mb-4">Stay Updated with Security Insights</h2>
+                        <p class="lead mb-4">Subscribe to our newsletter for the latest cybersecurity trends, web development tips, and security best practices.</p>
+                        <form class="newsletter-form d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            <button type="submit" class="button-10">Subscribe</button>
+                        </form>
+                        <p class="newsletter-disclaimer mt-3">We respect your privacy. Unsubscribe at any time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pagination">
+            <div class="container">
+                <div class="pagination-links">
+                    <a href="#" class="pagination-btn disabled">Previous</a>
+                    <a href="#" class="pagination-btn active">1</a>
+                    <a href="#" class="pagination-btn">2</a>
+                    <a href="#" class="pagination-btn">3</a>
+                    <a href="#" class="pagination-btn">Next</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h4 class="h6 mb-3">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="services.html" class="text-light text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-light text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="portfolio.html" class="text-light text-decoration-none">Portfolio</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="h6 mb-3">Legal</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="privacy.html" class="text-light text-decoration-none">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="terms.html" class="text-light text-decoration-none">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <a href="../index.html" class="text-decoration-none d-flex align-items-center">
+                        <img src="../assets/logos/F_Logo_White.svg" alt="Fortbubble" height="50px" class="me-3">
+                        <div>
+                            <p class="mb-0 text-white-50 small">Your trusted partner in web development and cybersecurity.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                        <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Fortbubble. All rights reserved.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="d-flex flex-wrap gap-3 justify-content-center">
+                    <a href="#" class="text-light text-decoration-none" title="X (Twitter)">
+                        <i class="fab fa-x-twitter fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-light text-decoration-none" title="Facebook">
+                        <i class="fab fa-facebook-f fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-light text-decoration-none" title="Instagram">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-light text-decoration-none" title="GitHub">
+                        <i class="fab fa-github fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-light text-decoration-none" title="Dribbble">
+                        <i class="fab fa-dribbble fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-light text-decoration-none" title="Behance">
+                        <i class="fab fa-behance fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-light text-decoration-none" title="YouTube">
+                        <i class="fab fa-youtube fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-light text-decoration-none" title="LinkedIn">
+                        <i class="fab fa-linkedin-in fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+# Fortbubble Website - Design System & Styling Guidelines
+
+## Project Overview
+Fortbubble is a cybersecurity and web development company website with a professional black and white theme. The site emphasizes security, professionalism, and technical expertise.
+
+## Technology Stack
+- **HTML5**: Semantic markup with accessibility in mind
+- **Bootstrap 5.3.2**: Responsive framework via CDN
+- **Custom CSS**: Black and white theme with Aeonik fonts
+- **Fonts**: Aeonik (Regular 400, Medium 500) from assets/fonts/
+
+## Design System
+
+### Color Palette
+- **Primary Black**: #000 (headings, buttons, borders)
+- **Primary White**: #fff (backgrounds, text on dark)
+- **Light Gray**: #f8f8f8 (alternating section backgrounds)
+- **Medium Gray**: #666 (secondary text)
+- **Dark Gray**: #333 (hover states, secondary elements)
+- **Border Gray**: #eee (subtle borders and dividers)
+
+### Typography
+- **Font Family**: 'Aeonik', 'Arial', sans-serif
+- **Font Weights**: 
+  - Regular (400): Body text, paragraphs
+  - Medium (500): Headings, buttons, labels
+- **Heading Hierarchy**:
+  - H1: `display-4` (3rem) - Page titles
+  - H2: `display-5` (2rem) - Section titles
+  - H3: `h4` (1.5rem) - Subsection titles
+  - H4: `h5` (1.25rem) - Card titles
+  - H5: `h6` (1rem) - Footer headings
+
+### Layout System
+
+#### Bootstrap Grid
+- **Container**: `container` (max-width: 1200px)
+- **Rows**: `row` with `g-4` gutters
+- **Columns**: 
+  - `col-12` - Full width
+  - `col-md-4` - 3-column layout on medium+ screens
+  - `col-md-6` - 2-column layout on medium+ screens
+  - `col-lg-8` - Centered content (8/12 width)
+  - `col-lg-4` - Sidebar content (4/12 width)
+
+#### Spacing
+- **Section Padding**: `py-5` (3rem top/bottom)
+- **Card Padding**: `p-4` (1.5rem all around)
+- **Margins**: `mb-4` (1.5rem), `mb-3` (1rem), `mb-2` (0.5rem)
+- **Gutters**: `g-4` (1.5rem between grid items)
+
+### Component Library
+
+#### Navigation
+```html
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">
+      <h1 class="mb-0">Fortbubble</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="current-page.html">Current Page</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+```
+
+#### Page Headers
+```html
+<section class="page-header py-5">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+        <h1 class="display-4 mb-4">Page Title</h1>
+        <p class="lead">Page description or subtitle</p>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+#### Service/Feature Cards
+```html
+<div class="row g-4">
+  <div class="col-md-4">
+    <div class="service-card h-100 p-4 text-center">
+      <h3 class="h4 mb-3">Card Title</h3>
+      <p>Card description content</p>
+    </div>
+  </div>
+</div>
+```
+
+#### Buttons
+- **Primary**: `btn btn-primary btn-lg` - Main CTAs
+- **Secondary**: `btn btn-outline-dark btn-lg` - Secondary actions
+- **Small**: `btn btn-primary` - Form submissions
+
+#### Call-to-Action Sections
+```html
+<section class="cta-section py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+        <h2 class="display-5 mb-4">CTA Title</h2>
+        <p class="lead mb-4">CTA description</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Action Button</a>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+#### Footer
+```html
+<footer class="bg-black text-white py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h3 class="h5 mb-3">Section Title</h3>
+        <p>Content</p>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="mb-0">&copy; 2024 Fortbubble. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+```
+
+### Content Patterns
+
+#### Alternating Sections
+- **White Background**: Default sections
+- **Light Background**: `bg-light` for alternating sections (mission, CTA, etc.)
+
+#### Lists
+- **Unstyled Lists**: `list-unstyled` for navigation and feature lists
+- **Bullet Points**: Use `•` character for custom bullet styling
+- **List Items**: `mb-2` for consistent spacing
+
+#### Forms
+- **Form Groups**: `form-group` with `mb-3` spacing
+- **Labels**: `font-weight: 500` (Medium)
+- **Inputs**: `form-control` class for Bootstrap styling
+- **Checkboxes**: Custom styling with `checkbox-group` and `checkbox-label`
+
+### File Structure
+```
+Fortbubble.com.au/
+├── index.html (Homepage)
+├── pages/
+│   ├── about.html
+│   ├── services.html
+│   ├── portfolio.html
+│   ├── blog.html
+│   ├── contact.html
+│   ├── privacy.html
+│   └── terms.html
+├── styles/
+│   ├── styles.css (Custom theme)
+│   └── background.css (Dot grid journal paper background)
+├── assets/
+│   ├── fonts/
+│   │   ├── Aeonik-Regular.woff2
+│   │   └── Aeonik-Medium.woff2
+│   └── images/
+└── scripts/
+```
+
+### Responsive Breakpoints
+- **Mobile**: < 768px (sm)
+- **Tablet**: 768px - 991px (md)
+- **Desktop**: 992px - 1199px (lg)
+- **Large Desktop**: 1200px+ (xl)
+
+### Accessibility Guidelines
+- Use semantic HTML elements
+- Include proper heading hierarchy
+- Add `aria-label` attributes where needed
+- Ensure sufficient color contrast
+- Use descriptive link text
+- Include alt text for images
+
+### Background Styling
+- **Dot Grid Pattern**: Journal paper style background with subtle dots
+- **Default Pattern**: 20px grid with light gray dots (#e0e0e0)
+- **Alternative Patterns**: Available via body classes (alternative-dots, dense-dots, minimal-dots)
+- **Content Overlays**: Semi-transparent backgrounds with backdrop blur for readability
+- **3D Shadow Effects**: Layered shadows create depth and floating appearance
+- **Interactive Elements**: Enhanced shadows on hover with subtle lift animations
+- **Responsive**: Adjusts dot size and spacing for mobile devices
+- **Accessibility**: Removes background for high contrast mode and print styles
+
+### Performance Considerations
+- Bootstrap loaded via CDN for optimal caching
+- Custom fonts with `font-display: swap`
+- Optimized CSS with minimal custom overrides
+- Responsive images and lazy loading ready
+- Background patterns use CSS gradients for optimal performance
+
+### Content Guidelines
+- **Tone**: Professional, technical, trustworthy
+- **Focus**: Security-first approach, expertise, reliability
+- **Keywords**: Cybersecurity, web development, secure coding, penetration testing
+- **Call-to-Actions**: Always lead to contact page or specific service pages
+
+### Maintenance Notes
+- All pages must maintain consistent navbar structure
+- Footer must be identical across all pages
+- Page headers should follow the established pattern
+- New sections should use the established grid system
+- Color palette should remain strictly black and white
+- Typography hierarchy must be maintained
+
+### Common Patterns to Follow
+1. **Section Structure**: Always use `py-5` for section padding
+2. **Content Centering**: Use `justify-content-center text-center` for headers
+3. **Card Layouts**: Use `h-100` for equal height cards
+4. **Button Placement**: Center CTAs with `justify-content-center`
+5. **List Styling**: Use `list-unstyled` and `mb-2` for consistent spacing
+6. **Form Layout**: Use Bootstrap form classes and proper spacing
+
+This design system ensures consistency across all pages and provides clear guidelines for future development and maintenance.
