@@ -52,6 +52,9 @@ class GridTowerGenerator {
         // Add some scattered pixels in the upper area
         this.addScatteredPixels();
         
+        // Add bottom layer randomization for more natural appearance
+        this.addBottomLayerRandomization();
+        
         // Add blue texture blocks
         this.addBlueTextureBlocks();
     }
@@ -64,8 +67,9 @@ class GridTowerGenerator {
         // Use exponential distribution for more realistic tower heights
         const height = Math.floor(minHeight + (maxHeight - minHeight) * Math.pow(Math.random(), 2));
         
-        // Fill the tower from bottom up
-        for (let row = this.rows - 1; row >= this.rows - height; row--) {
+        // Fill the tower from bottom up, but skip the bottom 3 rows (they'll be handled separately)
+        const towerStartRow = this.rows - 3; // Start towers 3 rows up from bottom
+        for (let row = towerStartRow; row >= this.rows - height; row--) {
             this.grid[row][column] = true;
         }
         
@@ -103,6 +107,22 @@ class GridTowerGenerator {
         }
     }
     
+    addBottomLayerRandomization() {
+        // Create scattered blocks in the bottom 3 rows, similar to the scattered area above towers
+        const bottomRows = 3;
+        const scatterCount = Math.floor(this.columns * bottomRows * 0.15); // 15% density in bottom 3 rows
+        
+        for (let i = 0; i < scatterCount; i++) {
+            const col = Math.floor(Math.random() * this.columns);
+            const row = this.rows - 1 - Math.floor(Math.random() * bottomRows); // Bottom 3 rows only
+            
+            // Only add if not already occupied
+            if (!this.grid[row][col]) {
+                this.grid[row][col] = true;
+            }
+        }
+    }
+    
     addBlueTextureBlocks() {
         // Count total black blocks first
         let totalBlocks = 0;
@@ -133,6 +153,9 @@ class GridTowerGenerator {
     
     renderGrid() {
         this.clearGrid();
+        
+        // Create a wave-like generation effect from bottom to top
+        const cells = [];
         
         for (let row = 0; row < this.rows; row++) {
             for (let col = 0; col < this.columns; col++) {
@@ -205,13 +228,22 @@ class GridTowerGenerator {
                         `;
                     }
                     
-                    // Add slight random delay for animation effect
-                    cell.style.animationDelay = `${Math.random() * 0.5}s`;
+                    // Create wave-like animation from bottom to top
+                    const distanceFromBottom = this.rows - row;
+                    const waveDelay = distanceFromBottom * 0.03; // 0.03s per row from bottom
+                    const randomDelay = Math.random() * 0.5; // Random delay up to 0.5s
+                    cell.style.animationDelay = `${waveDelay + randomDelay}s`;
+                    cell.style.animationDuration = '1.5s'; // Even slower animation duration
                     
-                    this.container.appendChild(cell);
+                    cells.push(cell);
                 }
             }
         }
+        
+        // Add cells to DOM in order
+        cells.forEach(cell => {
+            this.container.appendChild(cell);
+        });
     }
     
     clearGrid() {
@@ -228,47 +260,8 @@ class GridTowerGenerator {
 
 // Initialize the grid tower when the page loads
 document.addEventListener('DOMContentLoaded', function() {
-    let gridTower;
-    
     // Small delay to ensure the hero section is fully rendered
     setTimeout(() => {
-        gridTower = new GridTowerGenerator('grid-tower-bg');
+        new GridTowerGenerator('grid-tower-bg');
     }, 100);
-    
-    // Optional: Add a button to regenerate the pattern
-    // You can remove this if you don't want manual regeneration
-    const regenerateBtn = document.createElement('button');
-    regenerateBtn.textContent = 'Regenerate Pattern';
-    regenerateBtn.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-        background: #000;
-        color: #fff;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-family: 'Aeonik', sans-serif;
-        font-size: 12px;
-        opacity: 0.7;
-        transition: opacity 0.3s ease;
-    `;
-    
-    regenerateBtn.addEventListener('mouseenter', () => {
-        regenerateBtn.style.opacity = '1';
-    });
-    
-    regenerateBtn.addEventListener('mouseleave', () => {
-        regenerateBtn.style.opacity = '0.7';
-    });
-    
-    regenerateBtn.addEventListener('click', () => {
-        if (gridTower) {
-            gridTower.regenerate();
-        }
-    });
-    
-    document.body.appendChild(regenerateBtn);
 });

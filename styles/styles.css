@@ -291,7 +291,7 @@ nav {
 /* Hero Section */
 .hero {
     background: #f8f8f8;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     padding: 4rem 0;
     text-align: center;
     border-bottom: 1px solid #eee;
@@ -315,7 +315,7 @@ nav {
     position: absolute;
     background-color: #000;
     transition: opacity 0.3s ease;
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
     box-shadow: 
         3px 3px 0px rgba(0, 0, 0, 0.4),
         2px 2px 0px rgba(0, 0, 0, 0.3),
