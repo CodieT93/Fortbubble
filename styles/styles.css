@@ -43,6 +43,128 @@
     top: 6px;
 }
 
+/* Business Time Display */
+.business-time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #666;
+}
+
+/* Centered Business Time Display */
+.business-time-center {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #666;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.business-time .time-display,
+.business-time-center .time-display {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: #000;
+}
+
+.business-time .status-indicator,
+.business-time-center .status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.business-time .status-indicator.active,
+.business-time-center .status-indicator.active {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.business-time .status-indicator.away,
+.business-time-center .status-indicator.away {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.business-time .status-dot,
+.business-time-center .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.business-time .status-indicator.active .status-dot,
+.business-time-center .status-indicator.active .status-dot {
+    background-color: #28a745;
+    animation: pulse-green 2s infinite;
+}
+
+.business-time .status-indicator.away .status-dot,
+.business-time-center .status-indicator.away .status-dot {
+    background-color: #dc3545;
+    animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@keyframes pulse-red {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Responsive adjustments for business time */
+@media (max-width: 991px) {
+    .business-time,
+    .business-time-center {
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+    
+    .business-time .status-indicator,
+    .business-time-center .status-indicator {
+        font-size: 0.7rem;
+        padding: 1px 4px;
+    }
+}
+
+@media (max-width: 767px) {
+    .business-time,
+    .business-time-center {
+        font-size: 0.75rem;
+        gap: 4px;
+    }
+    
+    .business-time .time-display,
+    .business-time-center .time-display {
+        font-size: 0.8rem;
+    }
+    
+    /* Hide business time on very small screens to avoid crowding */
+    .business-time-center {
+        display: none;
+    }
+}
+
 body {
     font-family: 'Aeonik', 'Arial', sans-serif;
     line-height: 1.6;
