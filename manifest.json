@@ -1,0 +1,86 @@
+{
+  "name": "Fortbubble - Web Development & Cybersecurity Solutions",
+  "short_name": "Fortbubble",
+  "description": "Professional web development and cybersecurity services for businesses. Secure, modern, and reliable IT solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "security"],
+  "icons": [
+    {
+      "src": "assets/logos/F_Logo_White.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/logos/Fortbubble_Logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/logos/Fortbubble_Logo.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "Fortbubble homepage showing services and cybersecurity solutions"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with our team",
+      "url": "/pages/contact.html",
+      "icons": [
+        {
+          "src": "assets/logos/F_Logo_White.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Our Services",
+      "short_name": "Services",
+      "description": "View our web development and cybersecurity services",
+      "url": "/pages/services.html",
+      "icons": [
+        {
+          "src": "assets/logos/F_Logo_White.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Portfolio",
+      "short_name": "Portfolio",
+      "description": "See our successful projects",
+      "url": "/pages/portfolio.html",
+      "icons": [
+        {
+          "src": "assets/logos/F_Logo_White.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
+}

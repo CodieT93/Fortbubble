@@ -1,0 +1,51 @@
+# Robots.txt for Fortbubble.com.au
+# Web Development & Cybersecurity Solutions
+
+User-agent: *
+Allow: /
+
+# Disallow access to sensitive areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.log$
+Disallow: /*.sql$
+Disallow: /*.bak$
+
+# Allow access to important files
+Allow: /assets/
+Allow: /styles/
+Allow: /scripts/
+Allow: /pages/
+
+# Sitemap location
+Sitemap: https://fortbubble.com.au/sitemap.xml
+
+# Crawl delay (optional - be respectful to server resources)
+Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block malicious bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Security note: This file helps search engines understand your site structure
+# Last updated: December 15, 2024

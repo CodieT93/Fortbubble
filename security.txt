@@ -1,0 +1,40 @@
+Contact: mailto:security@fortbubble.com.au
+Contact: https://fortbubble.com.au/pages/contact.html
+Expires: 2025-12-31T23:59:59.000Z
+Encryption: https://fortbubble.com.au/pgp-key.txt
+Acknowledgments: https://fortbubble.com.au/security-acknowledgments.html
+Preferred-Languages: en
+Canonical: https://fortbubble.com.au/.well-known/security.txt
+Policy: https://fortbubble.com.au/pages/terms.html#security
+
+# Security Policy for Fortbubble
+# 
+# We take security seriously and appreciate the security research community's efforts
+# to help keep our services and our users safe.
+#
+# If you discover a security vulnerability, please report it responsibly:
+#
+# 1. Email us at security@fortbubble.com.au
+# 2. Include detailed steps to reproduce the issue
+# 3. Do not publicly disclose the vulnerability until we've had a chance to address it
+#
+# We will:
+# - Respond to your report within 48 hours
+# - Work with you to understand and resolve the issue
+# - Credit you in our security acknowledgments (unless you prefer to remain anonymous)
+# - Not pursue legal action against security researchers acting in good faith
+#
+# Scope:
+# - fortbubble.com.au and all subdomains
+# - Our web applications and services
+# - Client data and systems (with explicit permission)
+#
+# Out of Scope:
+# - Social engineering attacks
+# - Physical attacks
+# - Denial of service attacks
+# - Issues requiring physical access to devices
+#
+# Thank you for helping keep Fortbubble secure!
+#
+# Last updated: December 15, 2024
