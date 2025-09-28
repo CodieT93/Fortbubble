@@ -8,6 +8,9 @@ Fortbubble is a cybersecurity and web development company website with a profess
 - **Bootstrap 5.3.2**: Responsive framework via CDN
 - **Custom CSS**: Black and white theme with Aeonik fonts
 - **Fonts**: Aeonik (Regular 400, Medium 500) from assets/fonts/
+- **SEO**: Enhanced meta tags, structured data (schema.org), canonical URLs
+- **Analytics**: Google Analytics 4 integration
+- **Performance**: Font preloading, preconnect tags, lazy loading
 
 ## Design System
 
@@ -102,6 +105,8 @@ Fortbubble is a cybersecurity and web development company website with a profess
 - **Primary**: `btn btn-primary btn-lg` - Main CTAs
 - **Secondary**: `btn btn-outline-dark btn-lg` - Secondary actions
 - **Small**: `btn btn-primary` - Form submissions
+- **Custom Button**: `button-10` - Custom styled buttons with hover effects
+- **CTA Button**: `cta-button` - Call-to-action buttons with enhanced styling
 
 #### Call-to-Action Sections
 ```html
@@ -159,6 +164,8 @@ Fortbubble is a cybersecurity and web development company website with a profess
 ```
 Fortbubble.com.au/
 ├── index.html (Homepage)
+├── 404.html (Error page)
+├── TODO.md (Project management)
 ├── pages/
 │   ├── about.html
 │   ├── services.html
@@ -169,13 +176,19 @@ Fortbubble.com.au/
 │   └── terms.html
 ├── styles/
 │   ├── styles.css (Custom theme)
-│   └── background.css (Dot grid journal paper background)
+│   ├── background.css (Dot grid journal paper background)
+│   └── button-styles.css (Custom button styling)
 ├── assets/
 │   ├── fonts/
 │   │   ├── Aeonik-Regular.woff2
 │   │   └── Aeonik-Medium.woff2
-│   └── images/
-└── scripts/
+│   ├── images/
+│   └── logos/
+├── scripts/
+├── sitemap.xml (SEO sitemap)
+├── robots.txt (Search engine directives)
+├── manifest.json (PWA manifest)
+└── security.txt (Security contact info)
 ```
 
 ### Responsive Breakpoints
@@ -204,16 +217,21 @@ Fortbubble.com.au/
 
 ### Performance Considerations
 - Bootstrap loaded via CDN for optimal caching
-- Custom fonts with `font-display: swap`
+- Custom fonts with `font-display: swap` and preloading
 - Optimized CSS with minimal custom overrides
 - Responsive images and lazy loading ready
 - Background patterns use CSS gradients for optimal performance
+- Google Analytics 4 with optimized loading
+- Preconnect tags for external resources
+- Canonical URLs to prevent duplicate content
 
 ### Content Guidelines
 - **Tone**: Professional, technical, trustworthy
 - **Focus**: Security-first approach, expertise, reliability
 - **Keywords**: Cybersecurity, web development, secure coding, penetration testing
 - **Call-to-Actions**: Always lead to contact page or specific service pages
+- **Contact Information**: Use +61 404 556 593 for all phone numbers
+- **Timezone**: Use AEST (Australian Eastern Standard Time) for business hours
 
 ### Maintenance Notes
 - All pages must maintain consistent navbar structure
@@ -222,6 +240,10 @@ Fortbubble.com.au/
 - New sections should use the established grid system
 - Color palette should remain strictly black and white
 - Typography hierarchy must be maintained
+- SEO meta tags must be consistent across all pages
+- Structured data (schema.org) should be maintained
+- Google Analytics tracking must be present on all pages
+- Form handlers must be functional and tested
 
 ### Common Patterns to Follow
 1. **Section Structure**: Always use `py-5` for section padding
@@ -230,5 +252,23 @@ Fortbubble.com.au/
 4. **Button Placement**: Center CTAs with `justify-content-center`
 5. **List Styling**: Use `list-unstyled` and `mb-2` for consistent spacing
 6. **Form Layout**: Use Bootstrap form classes and proper spacing
+7. **SEO Implementation**: Include meta tags, structured data, and canonical URLs
+8. **Analytics Tracking**: Add GA4 tracking to all pages
+9. **Accessibility**: Use proper alt text, ARIA labels, and semantic HTML
+10. **Performance**: Preload fonts, use lazy loading for images
+
+### SEO Requirements
+- **Meta Tags**: Title, description, keywords, robots, canonical
+- **Open Graph**: og:title, og:description, og:image, og:url, og:type
+- **Twitter Cards**: twitter:card, twitter:title, twitter:description
+- **Structured Data**: Organization, WebSite, Service, ContactPage schemas
+- **Analytics**: Google Analytics 4 with proper event tracking
+- **Performance**: Core Web Vitals optimization
+
+### Contact Information Standards
+- **Phone**: +61 404 556 593 (international format)
+- **Local**: 0404556593 (Australian mobile format)
+- **Timezone**: AEST (Australian Eastern Standard Time)
+- **Business Hours**: Monday-Friday, 9:00 AM - 5:00 PM AEST
 
 This design system ensures consistency across all pages and provides clear guidelines for future development and maintenance.
